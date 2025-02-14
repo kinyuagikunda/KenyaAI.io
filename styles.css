@@ -9,88 +9,94 @@
 body {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     min-height: 100vh;
     background-color: #f4f4f4;
+    color: #333;
 }
 
 .container {
     display: flex;
     width: 90%;
     max-width: 1200px;
+    margin: 20px auto;
+    gap: 20px;
+}
+
+/* Three-Column Layout */
+.sidebar {
+    width: 20%;
     background: white;
     padding: 20px;
+    border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Three Column Layout */
-.left, .right {
-    flex: 1;
+.main-content {
+    width: 60%;
+    background: white;
     padding: 20px;
-    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.middle {
-    flex: 2.5;
+.sponsors {
+    width: 20%;
+    background: white;
     padding: 20px;
-    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.left, .right {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.left img, .right img {
-    width: 120px;
-    height: auto;
-    margin: 10px;
-    object-fit: contain;
-}
-
-h1 {
+/* Partner Logos */
+.partner, .sponsor {
     text-align: center;
-    font-size: 24px;
     margin-bottom: 20px;
 }
 
-p {
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 10px;
+.partner img, .sponsor img {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
-/* Footer for Individual Collaborators */
-.footer {
-    width: 100%;
-    text-align: center;
-    margin-top: 20px;
-    padding: 15px;
-    background: #333;
-    color: white;
-}
-
-.footer h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.footer p {
+.partner p, .sponsor p {
+    margin-top: 10px;
     font-size: 14px;
+    font-weight: bold;
+}
+
+/* Individual Collaborators */
+.collaborators {
+    margin-top: 40px;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.collaborators h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.collaborators ul {
+    list-style: none;
+    text-align: center;
+}
+
+.collaborators li {
+    padding: 10px 0;
+    font-size: 16px;
 }
 
 /* Responsive Design */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
     .container {
         flex-direction: column;
-    }
-    .left, .middle, .right {
         width: 100%;
     }
-    .left img, .right img {
-        width: 80px;
+    .sidebar, .main-content, .sponsors {
+        width: 100%;
     }
 }
