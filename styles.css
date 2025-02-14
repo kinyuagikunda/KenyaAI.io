@@ -1,100 +1,96 @@
-/* General Styles */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     min-height: 100vh;
+    background-color: #f4f4f4;
 }
 
-/* Full-Page Container */
 .container {
-    flex: 1;
-    width: 100%;
-    max-width: 1400px;
-    margin: auto;
-    padding: 40px;
-    background: #fff;
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    background: white;
+    padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
 }
 
-/* Typography */
+/* Three Column Layout */
+.left, .right {
+    flex: 1;
+    padding: 20px;
+    background: #ffffff;
+}
+
+.middle {
+    flex: 2.5;
+    padding: 20px;
+    background: #ffffff;
+}
+
+.left, .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.left img, .right img {
+    width: 120px;
+    height: auto;
+    margin: 10px;
+    object-fit: contain;
+}
+
 h1 {
-    font-size: 2.5rem;
     text-align: center;
-    color: #004080;
+    font-size: 24px;
     margin-bottom: 20px;
 }
 
-h2 {
-    font-size: 2rem;
-    text-align: center;
-    color: #0056b3;
-    margin-top: 30px;
-}
-
 p {
-    font-size: 1.2rem;
-    text-align: center;
-    line-height: 1.8;
-    padding: 0 10%;
-}
-
-/* Highlights */
-.highlight {
-    font-weight: bold;
-    color: #d9534f;
-}
-
-/* Grid Layout for Partners and Sponsors */
-.partners-container, .sponsors-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 40px;
-    margin-top: 40px;
-    padding: 20px;
-    width: 100%;
-}
-
-/* Individual Partner and Sponsor Cards */
-.partner, .sponsor {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease-in-out;
-    width: 220px;
-    height: 220px;
-}
-
-.partner:hover, .sponsor:hover {
-    transform: scale(1.05);
-}
-
-.partner img, .sponsor img {
-    width: 100%;
-    max-height: 150px;
-    object-fit: contain;
+    font-size: 16px;
+    line-height: 1.5;
     margin-bottom: 10px;
 }
 
-/* Footer to Push Content to Fill Page */
-footer {
+/* Footer for Individual Collaborators */
+.footer {
+    width: 100%;
     text-align: center;
-    padding: 20px;
-    font-size: 1rem;
-    background: #004080;
+    margin-top: 20px;
+    padding: 15px;
+    background: #333;
     color: white;
-    margin-top: auto;
+}
+
+.footer h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .left, .middle, .right {
+        width: 100%;
+    }
+    .left img, .right img {
+        width: 80px;
+    }
 }
