@@ -1,3 +1,0 @@
-# KenyaAI.io
-test
-test

@@ -42,7 +42,7 @@ p {
 }
 
 .partners-row img {
-    height: 80px; /* Adjust as needed */
+    height: 80px; /* Adjust as needed*/
     max-width: 150px;
     object-fit: contain;
 }
