@@ -46,3 +46,20 @@ p {
     max-width: 150px;
     object-fit: contain;
 }
+.partners, .sponsors {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.partner, .sponsor {
+    text-align: center;
+}
+
+.partner img, .sponsor img {
+    width: 150px; /* Ensures uniform image size */
+    height: auto;
+    object-fit: contain;
+}
