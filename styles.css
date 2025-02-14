@@ -1,102 +1,102 @@
-/* General Reset */
-* {
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     background-color: #f4f4f4;
-    color: #333;
 }
 
 .container {
     display: flex;
-    width: 90%;
+    flex: 1;
     max-width: 1200px;
-    margin: 20px auto;
+    margin: auto;
+    padding: 20px;
     gap: 20px;
 }
 
-/* Three-Column Layout */
-.sidebar {
-    width: 20%;
-    background: white;
+/* Columns Layout */
+.left-column, .right-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-.main-content {
-    width: 60%;
-    background: white;
+.middle-column {
+    flex: 2.5;
+    background: #fff;
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-.sponsors {
-    width: 20%;
-    background: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Partner Logos */
-.partner, .sponsor {
+h1, h2 {
     text-align: center;
-    margin-bottom: 20px;
+    color: #333;
 }
 
+p {
+    text-align: justify;
+    color: #555;
+}
+
+/* Logos Styling */
 .partner img, .sponsor img {
-    width: 100px;
+    width: 120px;
     height: auto;
-    display: block;
-    margin: 0 auto;
+    margin: 10px 0;
 }
 
 .partner p, .sponsor p {
-    margin-top: 10px;
     font-size: 14px;
-    font-weight: bold;
+    text-align: center;
+    color: #444;
 }
 
-/* Individual Collaborators */
+/* Footer Section for Individual Collaborators */
 .collaborators {
-    margin-top: 40px;
-    background: white;
+    width: 100%;
+    background: #fff;
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .collaborators h2 {
     text-align: center;
-    margin-bottom: 20px;
 }
 
 .collaborators ul {
     list-style: none;
-    text-align: center;
+    padding: 0;
 }
 
 .collaborators li {
-    padding: 10px 0;
-    font-size: 16px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.collaborators li:last-child {
+    border-bottom: none;
 }
 
 /* Responsive Design */
 @media screen and (max-width: 900px) {
     .container {
         flex-direction: column;
-        width: 100%;
     }
-    .sidebar, .main-content, .sponsors {
+
+    .left-column, .right-column, .middle-column {
+        flex: 1;
         width: 100%;
     }
 }
